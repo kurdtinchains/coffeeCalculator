@@ -80,3 +80,19 @@ waterInput.addEventListener("input", (e) => {
     waterOutput.innerHTML = waterToLungo(water);
   }
 });
+
+brewMethod.addEventListener("change", (e) => {
+  if (e.target.value === "pour-over") {
+    groundsOutput.innerHTML = groundsToWater(grounds);
+    waterOutput.innerHTML = waterToGrounds(water);
+  } else if (e.target.value === "espresso") {
+    groundsOutput.innerHTML = esGroundsToWater(grounds);
+    waterOutput.innerHTML = esWaterToGrounds(water);
+  } else if (e.target.value === "ris") {
+    groundsOutput.innerHTML = ristrettoToWater(grounds);
+    waterOutput.innerHTML = waterToRistretto(water);
+  } else if (e.target.value === "lungo") {
+    groundsOutput.innerHTML = lungoToWater(grounds);
+    waterOutput.innerHTML = waterToLungo(water);
+  }
+});
