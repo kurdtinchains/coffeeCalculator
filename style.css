@@ -32,6 +32,10 @@ section {
   height: 320px;
 }
 
+input {
+  outline: none;
+}
+
 #ground-output, #water-output {
   display: inline-block;
 }
