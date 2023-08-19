@@ -113,7 +113,7 @@ brewMethod.addEventListener("change", (e) => {
     groundsOutput.innerHTML = lungoToWater(grounds);
     waterOutput.innerHTML = waterToLungo(water);
   } else if (e.target.value === "french-press") {
-    groundOutput.innerHTML = fpGroundsToWater(grounds);
+    groundsOutput.innerHTML = fpGroundsToWater(grounds);
     waterOutput.innerHTML = fpWaterToGrounds(water);
   }
 });
