@@ -25,7 +25,7 @@ const fpGroundsToWater = (grounds) => {
   return water + "ml";
 }
 
-const foWaterToGrounds = (water) => {
+const fpWaterToGrounds = (water) => {
   let grounds = 0;
   grounds = water / 15;
   return grounds + "g";
