@@ -17,6 +17,20 @@ const waterToGrounds = (water) => {
   return grounds + "g";
 };
 
+/* french press calcs */
+
+const fpGroundsToWater = (grounds) => {
+  let water = 0;
+  water = grounds * 15;
+  return water + "ml";
+}
+
+const foWaterToGrounds = (water) => {
+  let grounds = 0;
+  grounds = water / 15;
+  return grounds + "g";
+}
+
 /* espresso calcs */
 
 const esGroundsToWater = (grounds) => {
@@ -65,6 +79,8 @@ groundsInput.addEventListener("input", (e) => {
     groundsOutput.innerHTML = esGroundsToWater(grounds);
   } else if (brewMethod.value === "lungo") {
     groundsOutput.innerHTML = lungoToWater(grounds);
+  } else if (brewMethod.value === "french-press") {
+    groundsOutput.innerHTML = fpGroundsToWater(grounds);
   }
 });
 
@@ -78,6 +94,8 @@ waterInput.addEventListener("input", (e) => {
     waterOutput.innerHTML = waterToRistretto(water);
   } else if (brewMethod.value === "lungo") {
     waterOutput.innerHTML = waterToLungo(water);
+  } else if (brewMethod.value === "french-press") {
+    waterOutput.innerHTML = foWaterToGrounds(water);
   }
 });
 
