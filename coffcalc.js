@@ -95,7 +95,7 @@ waterInput.addEventListener("input", (e) => {
   } else if (brewMethod.value === "lungo") {
     waterOutput.innerHTML = waterToLungo(water);
   } else if (brewMethod.value === "french-press") {
-    waterOutput.innerHTML = foWaterToGrounds(water);
+    waterOutput.innerHTML = fpWaterToGrounds(water);
   }
 });
 
@@ -112,5 +112,8 @@ brewMethod.addEventListener("change", (e) => {
   } else if (e.target.value === "lungo") {
     groundsOutput.innerHTML = lungoToWater(grounds);
     waterOutput.innerHTML = waterToLungo(water);
+  } else if (e.target.value === "french-press") {
+    groundOutput.innerHTML = fpGroundsToWater(grounds);
+    waterOutput.innerHTML = fpWaterToGrounds(water);
   }
 });
